@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="Script.js">
+    <meta charset="utf-8" />
+    <title>this is title</title>
+</head>
+<body>
+<div class="form">
+<div class="form-leftside">
+<div><label for = "fname">Name</label></div>
+<div class="inputbox"><input type="text" id="fname" name= "firstname" placeholder= "Your Name">...</div>
+<div><label for= "email">E-mail</label></div>
+<div><input type="text" id="email" name="email" placeholder="xyz"@gmail.com><div>
+<div><label for="dob">DOB<label></div>
+<div><input type="date" id="dob"><div>
+<div><label for="interest">Select your interest</label><div>
+<select name="interest" id="interest">
+<option value="">---select ---</option>
+<option value="reading">Reading</option>
+<option value="football">Football</option>
+<option value="baseball">Baseball</option>
+<option value="vollyball">Vollyball</option>
+<option value="Searching">Hockey</option></select>
+<input type="checking" name="individual" id="individual" name="individual">
+<label for="individual">Individual</label>
+<input type="checkbox" name="organization" id="organization" name="organization">
+<label>for="checkbox" name="Organization"</label>
+<br><br>
+<div><label for="aboutinfo">About You</label><div>
+<div><textarea name="aboutinfo" id="aboutinfo" cols="35" rows="12" placeholder="Write  something about you..."></textarea><div>
+<input type="submit" value="send details">
+</div>
+</div>
+<h2 id="demo"></h2>
+
+<script>
+data=""
+const params = new URLSearchParams(window.location.search)
+for (const [key,value] of params){
+    data+=key+ " = " +value+ "<br>"
+}
+var a = document.getElementById("demo")
+a.innerHTML=data
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<h2 id="demo"></h2>
+
+<script>
+data=""
+const params = new URLSearchParams(window.location.search)
+for (const [key,value] of params){
+    data+=key+ " = " +value+ "<br>"
+}
+var a = document.getElementById("demo")
+a.innerHTML=data
+</script>
+</body>
+</html>
